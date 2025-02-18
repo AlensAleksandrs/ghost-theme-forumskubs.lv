@@ -7,73 +7,69 @@
     <link rel="stylesheet" href="{{asset "built/index.css"}}" />
     <script src="{{asset "built/index.js"}}" defer></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <title>{{meta_title}}</title>
 
     {{ghost_head}}
-    {{!-- Outputs important meta data and settings, should always be in <head> --}}
 
 </head>
 <body class="{{body_class}}">
-<div class="gh-viewport">
 
-<header id="gh-head" class="gh-head">
-    <nav class="gh-head-inner gh-container">
+<div class="h-min-screen font-kanit font-normal cursor-default">
 
-        <div class="gh-head-brand">
-            <a class="gh-head-logo" href="{{@site.url}}">
-                {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                {{else}}
-                    {{@site.title}}
-                {{/if}}
-            </a>
-            <a class="gh-burger" role="button" aria-label="menu">
-                <div class="gh-burger-box">
-                    <div class="gh-burger-inner"></div>
-                </div>
-            </a>
-        </div>
-        <div class="gh-head-menu">
-            {{navigation}}
-        </div>
-        <div class="gh-head-actions">
-            <div class="gh-head-actions-list">
-                {{search}}
-                {{#if @site.members_enabled}}
-                    {{^if @member}}
-                    <a class="gh-button" href="{{@site.signup_url}}">Subscribe</a>
-                    {{else}}
-                    <a class="gh-button" href="#/portal/account">Account</a>
-                    {{/if}}
-                {{/if}}
-            </div>
-        </div>
-    </nav>
-</header>
-
-<main class="gh-main">
-
+<main>
     {{{body}}}
-    {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
-
 </main>
 
-<footer class="gh-foot">
-    <div class="gh-container">
-        <div class="gh-foot-menu">
-            {{navigation type="secondary"}}
+<footer id="site-footer" class="w-screen p-8 bg-container-dark text-light-alt font-light text-xs">
+    <div id="footer-content" class="max-w-[850px] m-auto">
+        <div id="site-information" class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div id="service-information">
+                <div id="organisation-identity">
+                    <img id="organisation-logo" src="{{asset "images/kubs-website-logo.png"}}" class="max-h-18"/>
+                </div>
+                <p id="copyright-notice" class="my-4">VISAS TIESĪBAS AIZSARGĀTAS<br>© FORUMS KUBS 2024</p>
+                <div id="developer-information">
+                    <img id="developer-logo" src="{{asset "images/alens-requisites-logo.svg"}}" class="max-h-6 mt-4 mb-2"/>
+                    <h4 id="developer">Developed by <a class="text-light" href="https://alens.lv">Alens Aleksandrs Čerņa</a></h4>
+                </div>
+                <div id="maintainer-information">
+                    <img id="maintainer-logo" src="{{asset "images/rendezvous-requisites-logo.svg"}}" class="max-h-4 mt-4 mb-2"/>
+                    <h4 id="maintainer">Maintained by <a class="text-light" href="https://rendezvous.lv">SIA "Rendezvous"</a></h4>
+                </div>
+            </div>
+            <div id="organisation-information">
+                <div id="organisation-requisites">
+                    <h4 id="organisation-name" class="cursor-pointer font-medium text-light">Biedrība “Forums KUBS”</h4>
+                    <p id="organisation-registration-number">REG.NR. 40008335520</p>
+                    <p id="organisation-address" class="">ADRESE: Latvija, Ķekavas nov., Ķekavas pag., "Celmiņi"</p>
+                    <p id="organisation-mail-index">PASTA INDEKSS: LV-2113</p>
+                    <p id="organsisation-telephone-number" class="cursor-pointer hover:underline">TEL: +371 20548393</p>
+                    <p id="organisation-email" class="cursor-pointer hover:underline">E-PASTS: INFO@FORUMSKUBS.LV</p>
+                    <p id="organisation-bank" class="mt-4">“Swedbank” AS</p>
+                    <p id="organisation-bank-code">KODS: HABALV22</p>
+                    <p id="organisation-bank-number" class="cursor-pointer hover:underline">KONTA NUMURS: LV59HABA0551057830840</p>
+                </div>
+            </div>
         </div>
-        <div class="gh-foot-meta">
-            Published with <a href="https://ghost.org" target="_blank" rel="noopener">Ghost</a>
+        <div id="site-map" class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-2 sm:gap-y-0">
+            <a>To be developed</a>
+            <a>Sadarbības partneri</a>
+            <a>Jaunākās ziņas</a>
+            <a>Foruma galerija</a>
+            <a>Komanda</a>
+            <a>Datu drošības un privātuma politika</a>
+            <a>Mājaslapas lietošanas noteikumi</a>
         </div>
     </div>
 </footer>
 
 </div>
 
-{{!-- <foot> --}}
 {{ghost_foot}}
-{{!-- Outputs important scripts - should always be included before closing body tag --}}
 
 </body>
 </html>
