@@ -1,0 +1,24 @@
+<header id="site-header" style="background-image: url({{asset "images/kubs-website-background.png"}})" class="regular flex flex-col w-screen min-h-[500px] sm:min-h-[600px] md:min-h-[750px] p-8 pt-16 text-light font-extralight text-sm md:text-md bg-cover bg-center items-center">
+    <nav id="site-navigation" class="w-4/5 md:w-3/4 max-w-[545px] h-min hidden sm:flex justify-between">
+        <a id="link-about-us" href="/about" class="cursor-pointer hover:underline">PAR MUMS</a>
+        <a id="link-partners" href="/partners" class="cursor-pointer hover:underline">SADARBĪBAS PARTNERI</a>
+        <a id="link-news" href="/news" class="cursor-pointer hover:underline">JAUNĀKĀS ZIŅAS</a>
+        <a id="link-gallery" href="/gallery" class="cursor-pointer hover:underline">GALERIJA</a>
+    </nav>
+    <nav id="site-mobile-navigation" class="absolute top-4 right-4 sm:hidden">
+        <img src="{{asset "images/burger-icon.svg"}}" class="max-h-6"/>
+    </nav>
+    <div id="hero-section" class="flex flex-col gap-4 sm:gap-2 w-screen grow justify-center items-center">
+        <img id="organisation-logo" src="{{asset "images/kubs-website-logo.png"}}" class="max-w-48 sm:max-w-64"/>
+        <div id="organisation-social-media" class="flex w-full max-w-48 sm:max-w-64 justify-between text-extralight text-xs sm:text-sm">
+            <div id="organisation-facebook" class="flex items-center gap-1 hover:underline">
+                <img id="facebook-logo" src="{{asset "images/facebook-icon.svg"}}" class="max-h-4"/>
+                <a href="" class="">kubskubam</a>
+            </div>
+            <div id="organisation-instagram" class="flex items-center gap-1 hover:underline">
+                <img id="instagram-logo" src="{{asset "images/instagram-icon.svg"}}" class="max-h-4"/>
+                <a href="" class="">forumskubs</a>
+            </div>
+        </div>
+    </div>
+</header>
