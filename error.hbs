@@ -7,24 +7,26 @@
     <link rel="stylesheet" href="{{asset "built/index.css"}}" />
     <script src="{{asset "built/index.js"}}" defer></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
     <title>{{meta_title}}</title>
 
     {{ghost_head}}
-    {{!-- Outputs important meta data and settings, should always be in <head> --}}
 
 </head>
-
 <body class="{{body_class}} bg-container-dark">
 
-<div class="h-min-screen font-kanit font-normal cursor-default">
+<div class="h-min-screen font-kanit font-normal cursor-default bg-container-light text-md flex items-center justify-center flex-col">
 
-    {{> "header" }}
+    {{> "header-short" }}
 
-    <main class="gh-main">
-        <section class="bg-container-light">
-            <h1 class="gh-error-code">{{statusCode}}</h1>
-            <p class="gh-error-description">{{message}}</p>
-            <p class="gh-error-link"><a href="{{@site.url}}">Go to the front page →</a></p>
+    <main id="page-content" class="w-full min-h-[30vh] flex justify-center items-center">
+        <section class="contained p-8">
+            <h1 class="text-6xl text-center md:text-7xl lg:text-8xl font-extrabold mb-2">{{statusCode}}</h1>
+            <p class="text-xl text-center md:text-2xl lg:text-3xl font-regular mb-2">{{message}}</p>
+            <p class="text-lg text-center lg:text-xl font-regular mb-2"><a href="{{@site.url}}">Atgriezties →</a></p>
 
             {{#if errorDetails}}
                 <section class="gh-error-stack">
