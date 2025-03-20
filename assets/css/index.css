@@ -25,3 +25,10 @@
     font-display: swap;
     src: url("https://fonts.gstatic.com/s/kanit/v7/ft8oF8by3bUzvAg_p7mRjA.woff2") format("woff2");
 }
+
+.contained {
+    max-width: 1280px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin: auto;
+}

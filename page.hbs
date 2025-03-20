@@ -1,63 +1,29 @@
-<!DOCTYPE html>
-<html lang="{{@site.locale}}">
-<head>
+{{!< default-shorthand}}
+WRONG!
+{{#post}}
+    <article class="gh-article {{post_class}}">
+        {{#match @page.show_title_and_feature_image}}
+            <header class="gh-header gh-canvas">
+                <h1 class="gh-title">{{title}}</h1>
 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{asset "built/index.css"}}" />
-    <script src="{{asset "built/index.js"}}" defer></script>
+                {{#if custom_excerpt}}
+                    <p class="gh-excerpt">{{custom_excerpt}}</p>
+                {{/if}}
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <title>{{meta_title}}</title>
-
-    {{ghost_head}}
-
-</head>
-<body class="{{body_class}} bg-container-dark">
-
-<div class="h-min-screen font-kanit font-normal cursor-default bg-container-light text-md flex items-center justify-center flex-col">
-
-    {{> "header-short" }}
-
-    <main id="page-content" class="max-w-[1280px] p-8">
-        WRONG!
-        {{#post}}
-            <article class="gh-article {{post_class}}">
-                {{#match @page.show_title_and_feature_image}}
-                    <header class="gh-header gh-canvas">
-                        <h1 class="gh-title">{{title}}</h1>
-
-                        {{#if custom_excerpt}}
-                            <p class="gh-excerpt">{{custom_excerpt}}</p>
+                {{#if feature_image}}
+                    <figure class="gh-feature-image">
+                        <img src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+                        {{#if feature_image_caption}}
+                            <figcaption>{{feature_image_caption}}</figcaption>
                         {{/if}}
+                    </figure>
+                {{/if}}
+            </header>
+        {{/match}}
 
-                        {{#if feature_image}}
-                            <figure class="gh-feature-image">
-                                <img src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
-                                {{#if feature_image_caption}}
-                                    <figcaption>{{feature_image_caption}}</figcaption>
-                                {{/if}}
-                            </figure>
-                        {{/if}}
-                    </header>
-                {{/match}}
+        <div class="gh-content gh-canvas">
+            {{content}}
+        </div>
 
-                <div class="gh-content gh-canvas">
-                    {{content}}
-                </div>
-
-            </article>
-        {{/post}}
-    </main>
-
-    {{> "footer" }}
-
-</div>
-
-{{ghost_foot}}
-
-</body>
-</html>
+    </article>
+{{/post}}
