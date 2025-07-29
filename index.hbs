@@ -27,31 +27,52 @@
             </div>
         </div>
         <div class="bg-container-dark p-8 text-light my-8">
-            <div class="contained grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                <img src="{{asset "images/sponsor_RedBull.png"}}" class="w-full aspect-[4/1]"/>
-                <img src="{{asset "images/sponsor_Adazu_Cipsi.png"}}" class="w-full aspect-[4/1]"/>
-                <img src="{{asset "images/sponsor_Spilva.png"}}" class="w-full aspect-[4/1]"/>
-                <img src="{{asset "images/sponsor_APF.png"}}" class="w-full aspect-[4/1]"/>
-                <img src="{{asset "images/sponsor_AXA.png"}}" class="w-full aspect-[4/1]"/>
-                <img src="{{asset "images/sponsor_Oyakata.png"}}" class="w-full aspect-[4/1]"/>
+            <div class="contained flex flex-col items-center sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Adazu.png" title="Ādažu Čipsi"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_APF.png" title="APF"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_AXA.png" title="AXA"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_BaltijasDarzeni.png" title="Baltijas dārzeņi"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Bella.png" title="Bella"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_BrainGames.png" title="Brain Games"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Dlight.png" title="Dlight"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_DruvasSaldejums.png" title="Druvas saldējums"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Ezerkaulini.png" title="Ezerkaulini"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Futbolgolfs.png" title="Futbolgolfs"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_GIT.png" title="GIT"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Gutta.png" title="Gutta"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Hematogenas.png" title="Hematogens"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Kaija.png" title="KAIJA"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Kombuca.png" title="Kombuca"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Kurzemes.png" title="Kurzemes Gaļsaimnieks"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Latgale.png" title="Latgales piens"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Merrild.png" title="Merrild"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Oyakata.png" title="OYAKATA"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_PapardesZieds.png" title="Papardes Zieds"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_PBTelpa.png" title="PB Telpa"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_RedBull.png" title="Red Bull"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Somersby.png" title="Somersby"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Spilva.png" title="Spilva"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_Swedbank.png" title="Swedbank"}}
+                {{> "sponsor" src="/assets/images/sponsors/sponsor_VeryBerry.png" title="Very Berry"}}
             </div>
         </div>
     </div>
     <div class="contained">
         <h3 id="partner-title" class="text-3xl md:text-4xl  font-extrabold mb-2 mt-8">Studējošo pašpārvaldes</h3>
         Forums "KUBS" seminārā piedalās delegāti no Latvijas augstāko izglītības iestāžu studējošo pašpārvaldēm.
-        <div class="mt-4 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            <img src="{{asset "images/member_BA_SP.png"}}" class="w-full aspect-[3/1]"/>
-            <img src="{{asset "images/member_DU_SP.png"}}" class="w-full aspect-[3/1]"/>
-            <img src="{{asset "images/member_KP.png"}}" class="w-full aspect-[3/1]"/>
-            <img src="{{asset "images/member_LBTU_SP.png"}}" class="w-full aspect-[3/1]"/>
-            <img src="{{asset "images/member_LKA_SP.png"}}" class="w-full aspect-[3/1]"/>
-            <img src="{{asset "images/member_LU_SP.png"}}" class="w-full aspect-[3/1]"/>
-            <img src="{{asset "images/member_RSU_SP.png"}}" class="w-full aspect-[3/1]"/>
-            <img src="{{asset "images/member_RTA_SP.png"}}" class="w-full aspect-[3/1]"/>
-            <img src="{{asset "images/member_RTU_SP.png"}}" class="w-full aspect-[3/1]"/>
-            <img src="{{asset "images/member_VeA_SP.png"}}" class="w-full aspect-[3/1]"/>
-            <img src="{{asset "images/member_ViA_SP.png"}}" class="w-full aspect-[3/1]"/>
+        <div class="contained flex flex-col items-center sm:grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {{> "member" src="/assets/images/members/member_BA.png" title="Banku augstskolas Studējošo pašpārvalde"}}
+            {{> "member" src="/assets/images/members/member_EKA.png" title="Ekonomikas un Kultūras augstskolas Studentu pašpārvalde"}}
+            {{> "member" src="/assets/images/members/member_LBTU.png" title="Latvijas Biozinātņu un tehnoloģiju universitātes Studējošo pašpārvalde"}}
+            {{> "member" src="/assets/images/members/member_LKA.png" title="Latvijas Kultūras akadēmijas Studējošo pašpārvalde"}}
+            {{> "member" src="/assets/images/members/member_LNAA.png" title="Latvijas Nacionālā aizsardzības akadēmijas Krīvu padome"}}
+            {{> "member" src="/assets/images/members/member_LU.png" title="Latvijas Universitātes Studentu padome"}}
+            {{> "member" src="/assets/images/members/member_RISEBA.png" title="RISEBA Studentu pašpārvalde"}}
+            {{> "member" src="/assets/images/members/member_RSU.png" title="Rīgas Stradiņa universitātes Studējošo pašpārvalde"}}
+            {{> "member" src="/assets/images/members/member_RTU.png" title="Rīgas Tehniskās universitātes Studentu parlaments"}}
+            {{> "member" src="/assets/images/members/member_Turiba.png" title='Biznesa augstskolas "Turība" Studējošo pašpārvalde'}}
+            {{> "member" src="/assets/images/members/member_VEA.png" title="Ventspils Augstskolas Studentu padome"}}
+            {{> "member" src="/assets/images/members/member_ViA.png" title="Vidzemes Augstskolas Studentu apvienība"}}
         </div>
     </div>
 </div>
